@@ -109,7 +109,7 @@ int socket_create(void);  // Bu C fonksiyonunu C++ çağırabilir
 
 ---
 
-## Neden UDP? TCP değil?
+## Neden UDP ? TCP değil ?
 
 ```
 TCP (Transmission Control Protocol):
@@ -214,11 +214,9 @@ Windows için:
 ipconfig
 ```
 
-Not: Bu proje Windows ortamında test edilmiştir. Linux/macOS için ek derleme ayarları gerekebilir.
-
 ---
 
-## Temel Kavramlar (Sunum İçin)
+## Temel Kavramlar 
 
 ### 1. Socket Programlama
 Soket, ağ üzerinde iletişim kurmak için kullanılan bir dosya tanımlayıcısıdır.
@@ -257,9 +255,9 @@ olarak ayarlanmıştır.
 Bu sayede ağ üzerinden daha stabil ve düşük gecikmeli görüntü aktarımı sağlanmıştır.
 
 
-## Proje Durumu
+## Sonuç ve Değerlendirme
 
-Bu proje çalışan prototip/demo seviyesine getirilmiştir.
+Bu proje kapsamında UDP tabanlı gerçek zamanlı görüntülü görüşme uygulaması başarıyla geliştirilmiş ve çalışan prototip seviyesine ulaştırılmıştır.
 
 Tamamlanan özellikler:
 
