@@ -257,29 +257,27 @@ Bu sayede ağ üzerinden daha stabil ve düşük gecikmeli görüntü aktarımı
 
 ## Sonuç ve Değerlendirme
 
-Bu proje kapsamında UDP tabanlı gerçek zamanlı görüntülü görüşme uygulaması başarıyla geliştirilmiş ve çalışan prototip seviyesine ulaştırılmıştır.
+Bu proje kapsamında UDP tabanlı gerçek zamanlı görüntülü görüşme uygulaması geliştirilmiş ve çalışan prototip seviyesine ulaştırılmıştır.
 
-Tamamlanan özellikler:
+Projede:
 
-- Qt tabanlı kullanıcı arayüzü
-- Kullanıcı giriş ekranı
-- UDP soket oluşturma, bind, gönderme ve alma
-- OpenCV ile kamera görüntüsü alma
-- JPEG sıkıştırma ile video gönderimi
-- Gelen görüntünün arayüzde gösterilmesi
-- Qt Multimedia ile gerçek mikrofon yakalama
-- Ses paketlerinin UDP üzerinden gönderilmesi
-- Mikrofon sessize alma
-- Kamera aç/kapat
-- Görüşme başlat/sonlandır
-- Uygulamayı kapatma butonu
-- 127.0.0.1 loopback testi
+- Qt tabanlı kullanıcı arayüzü,
+- UDP soket iletişimi,
+- OpenCV ile kamera görüntüsü işleme,
+- JPEG sıkıştırmalı video aktarımı,
+- Qt Multimedia ile gerçek mikrofon yakalama,
+- Ses paketlerinin UDP üzerinden iletilmesi,
+- Mikrofon ve kamera kontrol mekanizmaları
 
-Sınırlılıklar:
+başarıyla gerçekleştirilmiştir.
 
-- İki farklı bilgisayarda test yapılamamıştır.
-- Testler tek bilgisayarda localhost/loopback üzerinden yapılmıştır.
-- Loopback ses testinde yankı oluşabilir.
+Sistem localhost (`127.0.0.1`) loopback bağlantısı üzerinden test edilmiştir.
+
+### Sınırlılıklar
+
+- İki farklı bilgisayarda gerçek ağ testi yapılamamıştır.
+- Testler tek bilgisayar üzerinde gerçekleştirilmiştir.
+- Loopback ses testlerinde yankı oluşabilmektedir.
 
 Proje ekip çalışması şeklinde geliştirilmiştir. Ağ altyapısı ve temel ses modülü ilk aşamada hazırlanmış, daha sonra Qt GUI, OpenCV video sistemi ve Qt Multimedia gerçek ses entegrasyonu ile genişletilmiştir.
 
