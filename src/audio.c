@@ -1,11 +1,14 @@
 /*
  * audio.c
- * Ses yakalama ve oynatma katmanı (C ile yazılmış)
+ * Temel ses kontrol ve seviye gösterge katmanı (C ile yazılmış)
  *
- * Gerçek bir uygulamada ALSA (Linux), CoreAudio (macOS)
- * veya WASAPI (Windows) kullanılır. Bu dosya platform-bağımsız
- * bir soyutlama katmanı sunar.
+ * Gerçek mikrofon yakalama ve ses oynatma işlemleri
+ * main.cpp içinde Qt Multimedia ile yapılmaktadır.
+ *
+ * Bu dosya mute, seviye göstergesi ve temel ses kontrol
+ * işlevleri için destek katmanı olarak kullanılır.
  */
+
 
 #include "../include/audio.h"
 #include <stdio.h>
@@ -38,7 +41,7 @@ static int g_audio_initialized    = 0;
  * ------------------------------------------------------- */
 int audio_init(void) {
     if (g_audio_initialized) {
-        printf("[UYARİ] Ses sistemi zaten baslatilmis.\n");
+        printf("[UYARI] Ses sistemi zaten baslatilmis.\n");
         return 0;
     }
 
