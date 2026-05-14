@@ -116,7 +116,7 @@ int packet_send(int fd, const uint8_t* data, size_t len,
     dest.sin_port   = htons(dest_port);
 
     if (inet_pton(AF_INET, dest_ip, &dest.sin_addr) <= 0) {
-        fprintf(stderr, "[HATA] Gecersiz İP adresi: %s\n", dest_ip);
+        fprintf(stderr, "[HATA] Gecersiz IP adresi: %s\n", dest_ip);
         return -1;
     }
 
@@ -131,7 +131,7 @@ int packet_send(int fd, const uint8_t* data, size_t len,
 /* -------------------------------------------------------
  * packet_recv()
  * Karşı taraftan gelen UDP paketini alır.
- * Bloklanır (gelen paket yoksa bekler).
+ * Non-blocking modda çalışır; gelen paket yoksa -1 dönebilir.
  * buf:      Verinin yazılacağı tampon
  * buf_len:  Tamponun maksimum boyutu
  * src_ip:   Paketin geldiği IP (çıktı parametresi)
