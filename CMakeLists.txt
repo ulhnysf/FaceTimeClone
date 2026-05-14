@@ -42,6 +42,8 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 # Threads: std::thread için
 find_package(Threads REQUIRED)
 
+include(GNUInstallDirs)
+
 # ── Kaynak dosyaları ──
 set(C_SOURCES
     src/network.c    # UDP ağ katmanı (C)
