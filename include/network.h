@@ -19,7 +19,7 @@ extern "C" {
 /* Sabitler */
 #define DEFAULT_PORT     9090          /* Varsayılan dinleme portu     */
 #define PACKET_MAX_SIZE  65507         /* UDP'nin maksimum veri boyutu */
-#define IP_STR_LEN       INET_ADDRSTRLEN /* IP string uzunluğu (16)   */
+#define IP_STR_LEN       16            /* IPv4 string uzunluğu      */
 
 /* Fonksiyon prototipleri */
 int  network_init(void);
