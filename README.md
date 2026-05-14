@@ -122,7 +122,7 @@ UDP (User Datagram Protocol):
 ✓ Çok hızlı, düşük gecikme
 ✓ Gerçek zamanlı uygulama için ideal
 ✗ Paket kaybolabilir → 1 donuk kare (kabul edilir!)
-✓ FaceTime, Zoom, Skype hepsi UDP kullanır
+✓ Modern görüntülü görüşme uygulamalarında UDP tabanlı gerçek zamanlı iletişim tercih edilir
 ```
 
 ---
