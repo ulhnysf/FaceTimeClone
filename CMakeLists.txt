@@ -16,7 +16,7 @@ set(CMAKE_C_STANDARD   11)   # C11: Modern C standardı
 set(CMAKE_CXX_STANDARD 17)   # C++17: std::optional, structured bindings vb.
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Optimizasyon: Release modunda derle (daha hızlı)
+# Optimizasyon: Release modunda derle
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
@@ -78,7 +78,7 @@ target_link_libraries(FaceTimeClone PRIVATE
     Qt6::Widgets        # Qt GUI bileşenleri
     Qt6::Multimedia     # Qt ses/multimedia bileşenleri
     ${OpenCV_LIBS}      # OpenCV kütüphaneleri
-    Threads::Threads    # POSIX thread (pthread)
+    Threads::Threads    # std::thread / platform thread desteği
     # m                   # Matematik kütüphanesi Linux içindir, Windows'ta kullanılmaz
 )
 
