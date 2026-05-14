@@ -24,10 +24,10 @@
  * ------------------------------------------------------- */
 VideoStream::VideoStream()
     : m_camera_id(0)
-    , m_width(640)
-    , m_height(480)
-    , m_fps(30)
-    , m_jpeg_quality(75)  /* %75 JPEG kalitesi - hız/kalite dengesi */
+    , m_width(320)
+    , m_height(240)
+    , m_fps(20)
+    , m_jpeg_quality(45)
     , m_is_running(false)
     , m_is_camera_on(true)
     , m_frame_count(0)
@@ -86,7 +86,7 @@ bool VideoStream::init(int camera_id, int width, int height, int fps) {
  * ------------------------------------------------------- */
 bool VideoStream::start() {
     if (m_is_running) {
-        std::cout << "[UYARİ] Video akisi zaten calisiyor." << std::endl;
+        std::cout << "[UYARI] Video akisi zaten calisiyor." << std::endl;
         return true;
     }
 
@@ -142,7 +142,7 @@ void VideoStream::captureLoop() {
 
         /* Kameradan kare al */
         if (!m_capture.read(frame) || frame.empty()) {
-            std::cerr << "[UYARİ] Bos kare alindi, atlaniyor..." << std::endl;
+            std::cerr << "[UYARI] Bos kare alindi, atlaniyor..." << std::endl;
             continue;
         }
 
@@ -160,8 +160,8 @@ void VideoStream::captureLoop() {
         cv::cvtColor(frame, frame, cv::COLOR_BGR2RGB);
 
         /* JPEG sıkıştırma: Ham kare çok büyük, ağda göndermek için küçültüyoruz
-         * 640x480 ham BGR = 640*480*3 = ~900KB/kare
-         * 640x480 JPEG %75 = ~30-60KB/kare  (15-30x daha küçük!)
+         * 320x240 ham BGR = 320*240*3 = ~225KB/kare
+         * 320x240 JPEG kalite 45 = daha küçük paket boyutu
          */
         cv::imencode(".jpg", frame, jpeg_buf, encode_params);
 
