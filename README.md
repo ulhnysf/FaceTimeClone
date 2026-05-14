@@ -109,7 +109,7 @@ int socket_create(void);  // Bu C fonksiyonunu C++ çağırabilir
 
 ---
 
-## Neden UDP ? TCP değil ?
+## Neden UDP? TCP değil?
 
 ```
 TCP (Transmission Control Protocol):
@@ -282,6 +282,8 @@ Sistem localhost (`127.0.0.1`) loopback bağlantısı üzerinden test edilmişti
 - Loopback ses testlerinde yankı oluşabilmektedir.
 
 Proje ekip çalışması şeklinde geliştirilmiştir. Ağ altyapısı ve temel ses modülü ilk aşamada hazırlanmış, daha sonra Qt GUI, OpenCV video sistemi ve Qt Multimedia gerçek ses entegrasyonu ile genişletilmiştir.
+
+Ses sistemi test edilirken, aynı cihaz üzerinde loopback bağlantısı kullanıldığı için hoparlörden çıkan sesin tekrar mikrofona girmesi yankı ve cızırtıya neden olabilmektedir. Bu nedenle ses testi kulaklık ile gerçekleştirilmiştir.
 
 ## Lisans
 Eğitim amaçlı geliştirilmiştir.
