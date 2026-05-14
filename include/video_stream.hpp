@@ -33,9 +33,10 @@ public:
 
     /* Temel işlemler */
     bool init(int camera_id = 0,
-              int width     = 640,
-              int height    = 480,
-              int fps       = 30);
+          int width     = 320,
+          int height    = 240,
+          int fps       = 20);
+
     bool start();
     void stop();
 
