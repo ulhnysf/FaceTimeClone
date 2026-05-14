@@ -10,7 +10,7 @@
  *   └─ FaceTimeWindow (ana pencere)
  *       ├─ VideoStream  (kamera - C++ sınıfı)
  *       ├─ network.c    (UDP ağ - C kodu)
- *       └─ audio.c      (ses - C kodu)
+ *       └─ audio.c      (temel ses kontrol katmanı - C kodu)
  */
 
 #include <QApplication>
@@ -164,7 +164,7 @@ public:
         connect(m_ui_timer, &QTimer::timeout, this, &FaceTimeWindow::updateUI);
         m_ui_timer->start(33);
 
-        statusBar()->showMessage("Hazir. Bir İP adresi girin ve arama yapin.");
+        statusBar()->showMessage("Hazir. Bir IP adresi girin ve arama yapin.");
     }
 
     ~FaceTimeWindow() {
@@ -379,7 +379,7 @@ private:
         /* ── Bağlantı alanı ── */
         auto* connectLayout = new QHBoxLayout();
 
-        auto* lbl_ip = new QLabel("Hedef İP:", this);
+        auto* lbl_ip = new QLabel("Hedef IP:", this);
         m_input_ip   = new QLineEdit(this);
         m_input_ip->setPlaceholderText("Orn: 192.168.1.100");
         m_input_ip->setText("127.0.0.1");
