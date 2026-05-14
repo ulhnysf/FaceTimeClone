@@ -183,6 +183,8 @@ $env:PATH="C:\Qt\6.11.0\msvc2022_64\bin;C:\opencv\build\x64\vc16\bin;$env:PATH"
 .\FaceTimeClone.exe
 ```
 
+Not: Loopback ses testinde yankı oluşmaması için kulaklık kullanılması önerilir.
+
 
 
 ## Kullanım ve Test
