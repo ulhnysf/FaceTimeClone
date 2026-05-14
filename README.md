@@ -205,6 +205,8 @@ Adımlar:
 5. `Ara` butonuna basın.
 6. Kamera, mikrofon, ses ve UDP gönderim/alım akışı test edilir.
 
+Not: Loopback ses testlerinde yankı ve cızırtıyı azaltmak için kulaklık kullanılması önerilir.
+
 Not: Karşı bilgisayarda teknik sorun yaşandığı için iki farklı cihaz testi yapılamamıştır.
 
 
