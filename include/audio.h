@@ -1,7 +1,13 @@
 /*
  * audio.h
- * Ses katmanının dışarıya açık arayüzü
+ * Temel ses kontrol katmanının dışarıya açık arayüzü
+ *
+ * Gerçek mikrofon yakalama ve ses oynatma işlemleri
+ * main.cpp içinde Qt Multimedia ile yapılmaktadır.
+ * Bu dosya audio.c içindeki destek fonksiyonlarının
+ * prototiplerini tanımlar.
  */
+
 
 #ifndef AUDIO_H
 #define AUDIO_H
