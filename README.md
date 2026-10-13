@@ -189,8 +189,6 @@ Not: Loopback ses testinde yankı oluşmaması için kulaklık kullanılması ö
 
 ## Kullanım ve Test
 
-Program tek bilgisayarda loopback bağlantısı ile test edilmiştir.
-
 Local test için:
 
 - IP: `127.0.0.1`
@@ -205,9 +203,6 @@ Adımlar:
 5. `Ara` butonuna basın.
 6. Kamera, mikrofon, ses ve UDP gönderim/alım akışı test edilir.
 
-Not: Loopback ses testlerinde yankı ve cızırtıyı azaltmak için kulaklık kullanılması önerilir.
-
-Not: Karşı bilgisayarda teknik sorun yaşandığı için iki farklı cihaz testi yapılamamıştır.
 
 
 ### IP adresini öğrenmek
@@ -278,14 +273,9 @@ başarıyla gerçekleştirilmiştir.
 Sistem localhost (`127.0.0.1`) loopback bağlantısı üzerinden test edilmiştir.
 
 ### Sınırlılıklar
-
-- İki farklı bilgisayarda gerçek ağ testi yapılamamıştır.
-- Testler tek bilgisayar üzerinde gerçekleştirilmiştir.
 - Loopback ses testlerinde yankı oluşabilmektedir.
 
 Proje ekip çalışması şeklinde geliştirilmiştir. Ağ altyapısı ve temel ses modülü ilk aşamada hazırlanmış, daha sonra Qt GUI, OpenCV video sistemi ve Qt Multimedia gerçek ses entegrasyonu ile genişletilmiştir.
-
-Ses sistemi test edilirken, aynı cihaz üzerinde loopback bağlantısı kullanıldığı için hoparlörden çıkan sesin tekrar mikrofona girmesi yankı ve cızırtıya neden olabilmektedir. Bu nedenle ses testi kulaklık ile gerçekleştirilmiştir.
 
 ## Lisans
 Eğitim amaçlı geliştirilmiştir.
