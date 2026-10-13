@@ -270,7 +270,6 @@ Projede:
 
 başarıyla gerçekleştirilmiştir.
 
-Sistem localhost (`127.0.0.1`) loopback bağlantısı üzerinden test edilmiştir.
 
 ### Sınırlılıklar
 - Loopback ses testlerinde yankı oluşabilmektedir.
